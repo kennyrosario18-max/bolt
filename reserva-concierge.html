@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BOLT ⚡ Concierge · Solicitud de reserva</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  *{box-sizing:border-box}
+  body{margin:0;background:#FAFAFA;font-family:'Geist',system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+  input::placeholder{color:#BDBDC4}
+  a{color:inherit}
+  .field{width:100%;border:none;border-bottom:1.5px solid #E8E8EA;padding:8px 0;font-family:'Geist',system-ui;font-size:15px;color:#2B2B2B;background:transparent;outline:none;border-radius:0}
+  .field:focus{border-bottom-color:#FFD60A}
+  .qbtn{width:36px;height:36px;border:1.5px solid #0A0A0A;border-radius:9px;background:#FFFFFF;font-size:20px;font-weight:600;line-height:1;color:#0A0A0A;cursor:pointer;transition:all .15s}
+  .qbtn:hover{background:#FFD60A}
+  .cta{display:flex;align-items:center;justify-content:center;gap:9px;background:#FFD60A;color:#0A0A0A;font-weight:700;font-size:15px;text-decoration:none;padding:16px;border-radius:12px;margin-top:8px;font-family:'Geist',system-ui;transition:all .15s}
+  .cta:hover{background:#0A0A0A;color:#FFD60A}
+</style>
+</head>
+<body>
+<div style="min-height:100vh;display:flex;justify-content:center;align-items:flex-start;padding:22px 16px 46px">
+  <div style="width:100%;max-width:430px">
+    <div style="background:#FFFFFF;border:1px solid #E8E8EA;border-radius:20px;padding:28px 26px;box-shadow:0 1px 3px rgba(0,0,0,.05)">
+      <div style="display:flex;align-items:center;gap:6px">
+        <span style="font-weight:800;letter-spacing:-0.04em;font-size:32px;color:#0A0A0A">BOLT</span><span style="color:#FFD60A;font-size:25px">⚡</span>
+        <span style="margin-left:auto;font-size:10px;font-family:'Geist Mono',monospace;letter-spacing:0.08em;background:#0A0A0A;color:#FFD60A;padding:4px 8px;border-radius:6px">CONCIERGE</span>
+      </div>
+      <div style="height:4px;width:58px;background:#FFD60A;margin:9px 0 14px"></div>
+      <div style="font-size:14px;font-weight:600;color:#0A0A0A">Solicitud de reserva · Punta Cana</div>
+      <div style="font-size:12px;font-style:italic;color:#71717A">Partner booking request</div>
+      <p style="font-size:13px;color:#2B2B2B;line-height:1.55;margin:14px 0 24px">Para clientes aliados y concierges. Completa los datos del huésped y envíanos la solicitud. <span style="font-style:italic;color:#71717A">For partners &amp; concierges — fill in the guest details and send.</span></p>
+
+      <div style="display:flex;align-items:baseline;gap:8px;padding-bottom:8px;border-bottom:1px solid #0A0A0A;margin-bottom:16px">
+        <span style="font-size:12px;letter-spacing:0.18em;font-weight:600;color:#0A0A0A;text-transform:uppercase">Solicitud</span>
+        <span style="font-size:11px;font-style:italic;color:#71717A;letter-spacing:0.06em">· Booking request</span>
+      </div>
+
+      <label style="display:block;margin-bottom:16px">
+        <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:2px">
+          <span style="font-size:13px;font-weight:600;color:#0A0A0A">Concierge</span>
+          <span style="font-size:11px;font-style:italic;color:#71717A">· Partner agent</span>
+        </div>
+        <input class="field" id="concierge" type="text" placeholder="Ej. Ana Rodríguez">
+      </label>
+      <label style="display:block;margin-bottom:16px">
+        <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:2px">
+          <span style="font-size:13px;font-weight:600;color:#0A0A0A">Email</span>
+          <span style="font-size:11px;font-style:italic;color:#71717A">· Partner email</span>
+        </div>
+        <input class="field" id="cEmail" type="email" placeholder="agente@concierge.com">
+      </label>
+      <label style="display:block;margin-bottom:16px">
+        <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:2px">
+          <span style="font-size:13px;font-weight:600;color:#0A0A0A">Cliente / Huésped</span>
+          <span style="font-size:11px;font-style:italic;color:#71717A">· Guest</span>
+        </div>
+        <input class="field" id="huesped" type="text" placeholder="Ej. Sr. John Smith">
+      </label>
+      <label style="display:block;margin-bottom:16px">
+        <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:2px">
+          <span style="font-size:13px;font-weight:600;color:#0A0A0A">Villa</span>
+          <span style="font-size:11px;font-style:italic;color:#71717A">· Villa</span>
+        </div>
+        <input class="field" id="cVilla" type="text" placeholder="Nombre de la villa o dirección">
+      </label>
+
+      <div style="display:flex;align-items:baseline;gap:8px;padding-bottom:8px;border-bottom:1px solid #0A0A0A;margin:24px 0 16px">
+        <span style="font-size:12px;letter-spacing:0.18em;font-weight:600;color:#0A0A0A;text-transform:uppercase">Estadía</span>
+        <span style="font-size:11px;font-style:italic;color:#71717A;letter-spacing:0.06em">· Stay</span>
+      </div>
+      <div style="display:flex;gap:14px;margin-bottom:6px">
+        <label style="display:block;flex:1">
+          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:2px">
+            <span style="font-size:13px;font-weight:600;color:#0A0A0A">Check-in</span>
+            <span style="font-size:11px;font-style:italic;color:#71717A">· Arrival</span>
+          </div>
+          <input class="field" id="checkin" type="date" style="font-size:14px">
+        </label>
+        <label style="display:block;flex:1">
+          <div style="display:flex;align-items:baseline;gap:6px;margin-bottom:2px">
+            <span style="font-size:13px;font-weight:600;color:#0A0A0A">Check-out</span>
+            <span style="font-size:11px;font-style:italic;color:#71717A">· Departure</span>
+          </div>
+          <input class="field" id="checkout" type="date" style="font-size:14px">
+        </label>
+      </div>
+
+      <div style="display:flex;align-items:baseline;gap:8px;padding-bottom:8px;border-bottom:1px solid #0A0A0A;margin:24px 0 16px">
+        <span style="font-size:12px;letter-spacing:0.18em;font-weight:600;color:#0A0A0A;text-transform:uppercase">Carritos</span>
+        <span style="font-size:11px;font-style:italic;color:#71717A;letter-spacing:0.06em">· Carts &amp; seats</span>
+      </div>
+      <div style="display:flex;flex-direction:column;gap:10px">
+        <div style="display:flex;align-items:center;justify-content:space-between;border:1px solid #E8E8EA;border-radius:12px;padding:10px 14px">
+          <div>
+            <div style="font-size:14px;font-weight:700;color:#0A0A0A">4 pax</div>
+            <div style="font-size:11px;color:#71717A">4 asientos · 360 kg</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <button type="button" class="qbtn" onclick="bump('n4',-1)">−</button>
+            <span id="v4" style="min-width:22px;text-align:center;font-weight:700;font-size:17px;font-family:'Geist Mono',monospace;color:#0A0A0A">0</span>
+            <button type="button" class="qbtn" onclick="bump('n4',1)">+</button>
+          </div>
+        </div>
+        <div style="display:flex;align-items:center;justify-content:space-between;border:1px solid #E8E8EA;border-radius:12px;padding:10px 14px">
+          <div>
+            <div style="font-size:14px;font-weight:700;color:#0A0A0A">6 pax</div>
+            <div style="font-size:11px;color:#71717A">6 asientos · 540 kg</div>
+          </div>
+          <div style="display:flex;align-items:center;gap:12px">
+            <button type="button" class="qbtn" onclick="bump('n6',-1)">−</button>
+            <span id="v6" style="min-width:22px;text-align:center;font-weight:700;font-size:17px;font-family:'Geist Mono',monospace;color:#0A0A0A">0</span>
+            <button type="button" class="qbtn" onclick="bump('n6',1)">+</button>
+          </div>
+        </div>
+      </div>
+      <div style="display:flex;justify-content:space-between;align-items:baseline;background:#FFFBEA;border:1px solid #E8E8EA;border-left:6px solid #FFD60A;border-radius:10px;padding:10px 14px;margin:12px 0 20px">
+        <span style="font-size:12px;letter-spacing:0.12em;text-transform:uppercase;font-weight:600;color:#0A0A0A">Total carritos <span style="font-weight:400;font-style:italic;letter-spacing:0;text-transform:none;color:#71717A">· Total</span></span>
+        <span id="total" style="font-weight:700;font-size:18px;font-family:'Geist Mono',monospace;color:#0A0A0A">0</span>
+      </div>
+
+      <a class="cta" id="wa" href="#" target="_blank" rel="noopener">
+        <span>⚡ Enviar solicitud</span>
+        <span style="font-style:italic;font-weight:400;font-size:12px;opacity:.72">Send via WhatsApp</span>
+      </a>
+      <div style="margin-top:18px;padding-top:14px;border-top:1px solid #E8E8EA;font-family:'Geist Mono',monospace;font-size:10px;color:#71717A;line-height:1.7">
+        KR Experts and Management SRL · RNC 132-22400-2<br>
+        WhatsApp +1 809 839 8515 · info@krexpert.com
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+var counts = { n4: 0, n6: 0 };
+function bump(k, d){
+  counts[k] = Math.max(0, counts[k] + d);
+  document.getElementById(k === 'n4' ? 'v4' : 'v6').textContent = counts[k];
+  document.getElementById('total').textContent = counts.n4 + counts.n6;
+  update();
+}
+function val(id){ return document.getElementById(id).value; }
+function fmtD(v){ return v ? String(v).split('-').reverse().join('/') : '—'; }
+function update(){
+  var d = '—';
+  var total = counts.n4 + counts.n6;
+  var carts = [
+    counts.n4 ? '  · ' + counts.n4 + ' de 4 asientos (4 pax)' : '',
+    counts.n6 ? '  · ' + counts.n6 + ' de 6 asientos (6 pax)' : ''
+  ].filter(Boolean).join('\n');
+  var msg =
+'⚡ SOLICITUD DE RESERVA BOLT — Cliente aliado\n\n' +
+'Concierge: ' + (val('concierge') || d) + '\n' +
+'Email: ' + (val('cEmail') || d) + '\n\n' +
+'Cliente / Huésped: ' + (val('huesped') || d) + '\n' +
+'Villa: ' + (val('cVilla') || d) + '\n' +
+'Check-in: ' + fmtD(val('checkin')) + '\n' +
+'Check-out: ' + fmtD(val('checkout')) + '\n\n' +
+'Carritos: ' + (total || d) + (carts ? '\n' + carts : '');
+  document.getElementById('wa').href = 'https://wa.me/18098398515?text=' + encodeURIComponent(msg);
+}
+['concierge','cEmail','huesped','cVilla','checkin','checkout'].forEach(function(id){
+  document.getElementById(id).addEventListener('input', update);
+});
+update();
+</script>
+</body>
+</html>

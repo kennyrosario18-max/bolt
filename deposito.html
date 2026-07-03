@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOLT ⚡ · Datos para tu Depósito</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#1A1A1A; --grey:#8C8C8C; --line:#ECECEC; --yellow:#FFCB05; --cream:#FFF7D6; --white:#FFFFFF;
+    --display:"Bricolage Grotesque", system-ui, sans-serif; --body:"Inter", system-ui, sans-serif; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{ font-family:var(--body); color:var(--ink); background:#EDEDED; -webkit-font-smoothing:antialiased; padding:18px 14px 40px; line-height:1.5; }
+  .sheet{ max-width:420px; margin:0 auto; background:var(--white); border:1px solid #E2E2E2; border-radius:14px; overflow:hidden; box-shadow:0 24px 50px -24px rgba(0,0,0,.35); }
+  .head{ padding:24px 24px 0; }
+  .brand{ display:flex; align-items:center; gap:8px; font-family:var(--display); font-weight:800; font-size:26px; letter-spacing:-1px; }
+  .brand svg{width:21px;height:21px;flex:none}
+  .head .label{ margin-top:12px; font-size:10.5px; font-weight:600; letter-spacing:2.4px; text-transform:uppercase; color:var(--grey); }
+  .head .rule{ height:3px; background:var(--yellow); margin-top:9px; }
+
+  .amtbox{ margin:18px 24px 0; background:#1A1A1A; border-radius:12px; padding:18px 20px; text-align:center; }
+  .amtbox .k{ font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--yellow); }
+  .amtbox .v{ font-family:var(--display); font-weight:800; font-size:30px; color:#fff; letter-spacing:-1px; margin-top:5px; }
+  .amtbox .en{ font-size:10.5px; color:rgba(255,255,255,.55); font-style:italic; margin-top:4px; }
+
+  .sec{ padding:18px 24px 0; }
+  .eyebrow{ display:flex; align-items:center; gap:8px; font-size:10px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:var(--grey); margin-bottom:9px; }
+  .eyebrow .tag{ background:var(--yellow); color:#1A1A1A; padding:2px 7px; border-radius:5px; letter-spacing:.5px; }
+  .card{ border:1px solid var(--line); border-radius:10px; padding:5px 16px; }
+  .field{ padding:11px 0; border-bottom:1px solid var(--line); }
+  .field:last-child{border-bottom:0}
+  .field .k{ font-size:10px; font-weight:600; letter-spacing:1px; text-transform:uppercase; color:var(--grey); }
+  .field .v{ font-family:var(--display); font-weight:700; font-size:16px; margin-top:2px; }
+  .field .v.mono{ font-variant-numeric:tabular-nums; letter-spacing:.5px; }
+
+  .altrow{ display:flex; align-items:center; justify-content:space-between; margin:14px 24px 0; padding:11px 14px; border:1px dashed var(--line); border-radius:9px; }
+  .altrow .t{ font-size:12px; }
+  .altrow .t b{ font-weight:700; }
+  .altrow .v{ font-family:var(--display); font-weight:800; font-size:15px; }
+
+  .box{ margin:16px 24px 0; background:var(--cream); border-left:4px solid var(--yellow); border-radius:8px; padding:14px 16px; }
+  .box .ln{ font-size:12.5px; line-height:1.5; }
+  .box .ln b{ font-weight:600; }
+  .box .en{ display:block; color:var(--grey); font-style:italic; font-size:11px; margin-top:3px; }
+
+  .cta{ text-align:center; padding:20px 22px 4px; }
+  .wa{ display:inline-flex; align-items:center; gap:9px; background:var(--yellow); color:var(--ink); font-family:var(--display); font-weight:700; font-size:14.5px; text-decoration:none; padding:12px 24px; border-radius:999px; }
+  .wa svg{width:17px;height:17px}
+
+  .foot{ padding:16px 24px 22px; }
+  .foot .rule{ height:1px; background:var(--line); margin-bottom:10px; }
+  .legal{ font-size:10px; color:var(--grey); line-height:1.6; }
+  .legal b{ color:var(--ink); font-weight:600; }
+  @media print{ body{background:#fff;padding:0} .sheet{box-shadow:none;border:0;border-radius:0;max-width:100%} }
+</style>
+</head>
+<body>
+  <div class="sheet">
+    <div class="head">
+      <div class="brand"><svg viewBox="0 0 24 24" fill="none"><path d="M13.5 2 4 13.2h6.2L9 22l9.8-11.6h-6.4L13.5 2Z" fill="#FFCB05"/></svg><span>BOLT</span></div>
+      <div class="label">Datos para tu Depósito · Deposit Details</div>
+      <div class="rule"></div>
+    </div>
+
+    <div class="amtbox">
+      <div class="k">Depósito de confirmación · Confirmation deposit</div>
+      <div class="v">30% del total</div>
+      <div class="en">Confirma tu reserva · Confirms your booking</div>
+    </div>
+
+    <div class="sec">
+      <div class="eyebrow"><span class="tag">USD</span> Cuenta en dólares · USD account</div>
+      <div class="card">
+        <div class="field"><div class="k">Banco · Bank</div><div class="v">Banco López de Haro</div></div>
+        <div class="field"><div class="k">Beneficiario · Account name</div><div class="v" style="font-size:14.5px">KR Experts and Management, SRL</div></div>
+        <div class="field"><div class="k">Número de cuenta · Account number</div><div class="v mono">4010315659</div></div>
+        <div class="field"><div class="k">RNC</div><div class="v mono" style="font-size:14px">132-22400-2</div></div>
+      </div>
+    </div>
+
+    <div class="altrow">
+      <div class="t"><b>¿Prefieres pagar en pesos?</b><br>Prefer to pay in DOP?</div>
+      <div class="v">4040035848</div>
+    </div>
+
+    <div class="box">
+      <div class="ln"><b>Después de transferir,</b> envía tu comprobante por WhatsApp para confirmar tu reserva.</div>
+      <span class="en">After transferring, send your receipt via WhatsApp to confirm your booking.</span>
+    </div>
+
+    <div class="cta">
+      <a class="wa" href="https://wa.me/18098398515?text=Hola%20BOLT%2C%20aqu%C3%AD%20est%C3%A1%20mi%20comprobante%20de%20dep%C3%B3sito." target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-.9.1-3-.9-2.5-1.1-4-3.6-4.1-3.8-.1-.2-1-1.3-1-2.5s.6-1.8.8-2c.2-.2.5-.3.6-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.5-.3.3c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg>
+        Enviar comprobante
+      </a>
+    </div>
+
+    <div class="foot">
+      <div class="rule"></div>
+      <div class="legal">Conserva tu comprobante de transferencia. <b>BOLT ⚡</b> · KR Experts and Management SRL · RNC 132-22400-2 · +1 809 839 8515</div>
+    </div>
+  </div>
+</body>
+</html>
