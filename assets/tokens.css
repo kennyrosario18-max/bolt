@@ -1,0 +1,30 @@
+/* BOLT ⚡ Design Tokens v2.0 — julio 2026
+   Fuente de verdad de la línea gráfica. No usar colores fuera de esta paleta. */
+:root {
+  /* Color */
+  --bolt-yellow: #FFD60A;        /* ÚNICO amarillo oficial (logo, CTAs, acentos) */
+  --bolt-yellow-dark: #8A6A00;   /* texto "amarillo" sobre blanco */
+  --bolt-ink: #0A0A0A;           /* texto principal, wordmark */
+  --bolt-body: #2B2B2B;          /* texto de párrafo */
+  --bolt-grey: #71717A;          /* secundarios, inglés en itálica */
+  --bolt-line: #E8E8EA;          /* bordes finos */
+  --bolt-cream: #FFFBEA;         /* fondo de callouts */
+  --bolt-white: #FFFFFF;
+  --bolt-success: #16A34A; --bolt-success-soft: #DCFCE7;
+  --bolt-danger: #DC2626;  --bolt-danger-soft: #FEE2E2;
+
+  /* Tipografía */
+  --bolt-display: "Bricolage Grotesque", system-ui, sans-serif; /* títulos web, wordmark */
+  --bolt-text: "Inter", system-ui, sans-serif;                  /* cuerpo web */
+  --bolt-form: "Geist", system-ui, sans-serif;                  /* formularios */
+  --bolt-mono: "Geist Mono", monospace;                         /* datos, pie legal */
+  /* impresos/Word: Arial */
+
+  /* Espaciado y radios */
+  --bolt-radius-card: 14px;
+  --bolt-radius-box: 10px;
+  --bolt-radius-pill: 999px;
+  --bolt-pad-card: 28px 26px;
+  --bolt-sheet-max: 480px;
+  --bolt-rule: 3px;              /* grosor de la barra amarilla separadora */
+}
