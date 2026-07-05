@@ -1,11 +1,192 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="refresh" content="0; url=precios.html">
-<title>BOLT ⚡</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BOLT ⚡ Your ride in paradise · Renta y venta de carritos de golf · Punta Cana</title>
+<meta name="description" content="Renta y venta de carritos de golf en Puntacana Resort & Club, Cap Cana y Bávaro. Entrega donde estés, confirmación por WhatsApp en minutos, carritos asegurados. Desde US$50/día.">
+<meta property="og:title" content="BOLT ⚡ Your ride in paradise">
+<meta property="og:description" content="Renta y venta de carritos de golf en Punta Cana. Entrega donde estés, confirmación en minutos.">
+<link rel="icon" type="image/svg+xml" href="assets/bolt-icon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{ --ink:#0A0A0A; --grey:#71717A; --line:#E8E8EA; --yellow:#FFD60A; --ydark:#8A6A00; --cream:#FFFBEA; --white:#FFFFFF; --body:#2B2B2B;
+    --display:"Bricolage Grotesque", system-ui, sans-serif; --text:"Inter", system-ui, sans-serif; --mono:"Geist Mono", monospace; }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{ font-family:var(--text); color:var(--ink); background:#EDEDED; -webkit-font-smoothing:antialiased; padding:18px 14px 40px; line-height:1.5; }
+  .sheet{ max-width:520px; margin:0 auto; background:var(--white); border:1px solid #E2E2E2; border-radius:14px; overflow:hidden; box-shadow:0 24px 50px -24px rgba(0,0,0,.35); }
+  .topbar{ height:4px; background:var(--yellow); }
+  .head{ padding:24px 28px 0; display:flex; align-items:center; justify-content:space-between; }
+  .head img{ height:34px; }
+  .head .lang{ font-size:10.5px; font-family:var(--mono); color:var(--grey); }
+  .hero{ padding:22px 28px 0; }
+  .hero .kicker{ font-size:10.5px; font-weight:600; letter-spacing:2.2px; text-transform:uppercase; color:var(--grey); }
+  .hero h1{ font-family:var(--display); font-weight:800; font-size:34px; line-height:1.08; letter-spacing:-1px; margin-top:10px; }
+  .hero h1 .hl{ box-shadow:inset 0 -14px 0 var(--yellow); }
+  .hero .sub{ font-size:14px; color:var(--body); margin-top:12px; max-width:40ch; }
+  .hero .sub .en{ display:block; font-style:italic; color:var(--grey); font-size:12.5px; margin-top:4px; }
+  .cta-row{ display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; }
+  .btn-y{ display:inline-flex; align-items:center; gap:8px; background:var(--yellow); color:var(--ink); font-family:var(--display); font-weight:700; font-size:15px; padding:13px 24px; border-radius:999px; text-decoration:none; transition:all .15s; }
+  .btn-y:hover{ background:var(--ink); color:var(--yellow); }
+  .btn-o{ display:inline-flex; align-items:center; gap:8px; background:var(--white); color:var(--ink); border:1.5px solid var(--ink); font-weight:600; font-size:14px; padding:12px 22px; border-radius:999px; text-decoration:none; }
+  .cart-stage{ margin-top:8px; padding:0 10px; }
+  .promises{ display:flex; flex-wrap:wrap; gap:11px 10px; padding:6px 28px 4px; }
+  .promise{ display:flex; align-items:flex-start; gap:9px; width:calc(50% - 5px); }
+  .promise .dot{ width:18px; flex:none; margin-top:1px; }
+  .promise .t{ font-size:12.5px; font-weight:600; line-height:1.25; }
+  .promise .en{ display:block; font-weight:400; font-style:italic; color:var(--grey); font-size:10.5px; margin-top:1px; }
+  .hrule{ height:3px; background:var(--yellow); margin:18px 28px 0; }
+  .sec{ padding:22px 28px 2px; }
+  .eyebrow{ display:flex; align-items:baseline; gap:9px; margin-bottom:12px; }
+  .eyebrow .num{ font-family:var(--display); font-weight:800; font-size:13px; }
+  .eyebrow .txt{ font-size:10.5px; font-weight:600; letter-spacing:2.2px; text-transform:uppercase; color:var(--grey); }
+  .duo{ display:flex; gap:12px; flex-wrap:wrap; }
+  .duo .card{ flex:1; min-width:200px; border:1px solid var(--line); border-radius:12px; padding:18px; }
+  .duo .card.hot{ background:var(--cream); border-color:#EAD98A; }
+  .duo .k{ font-size:10px; font-weight:700; letter-spacing:1.6px; text-transform:uppercase; color:var(--ydark); }
+  .duo h3{ font-family:var(--display); font-weight:800; font-size:19px; letter-spacing:-.3px; margin-top:5px; }
+  .duo p{ font-size:12.5px; color:var(--body); margin-top:6px; line-height:1.45; }
+  .duo .price{ font-family:var(--display); font-weight:800; font-size:24px; margin-top:8px; }
+  .duo .price small{ font-size:11px; color:var(--grey); font-weight:400; font-family:var(--text); }
+  .duo a{ display:inline-block; margin-top:12px; font-weight:700; font-size:13px; color:var(--ink); text-decoration:none; border-bottom:2px solid var(--yellow); padding-bottom:1px; }
+  .steps{ display:flex; flex-direction:column; gap:0; }
+  .step{ display:flex; gap:14px; padding:12px 0; border-bottom:1px solid var(--line); }
+  .step:last-child{ border-bottom:0; }
+  .step .n{ font-family:var(--display); font-weight:800; font-size:15px; background:var(--yellow); width:28px; height:28px; border-radius:9px; display:flex; align-items:center; justify-content:center; flex:none; }
+  .step .tx{ font-size:13px; }
+  .step .tx b{ font-family:var(--display); font-weight:700; display:block; font-size:14px; }
+  .step .tx .en{ font-style:italic; color:var(--grey); font-size:11.5px; }
+  .ally{ margin:22px 28px 0; background:var(--ink); color:#fff; border-radius:12px; padding:20px 22px; }
+  .ally .k{ font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--yellow); }
+  .ally h3{ font-family:var(--display); font-weight:800; font-size:19px; margin-top:5px; }
+  .ally p{ font-size:12.5px; color:rgba(255,255,255,.8); margin-top:7px; }
+  .ally .links{ display:flex; gap:10px; flex-wrap:wrap; margin-top:13px; }
+  .ally a{ display:inline-block; font-size:12.5px; font-weight:700; text-decoration:none; padding:9px 16px; border-radius:999px; }
+  .ally a.f{ background:var(--yellow); color:var(--ink); }
+  .ally a.g{ color:#fff; border:1px solid rgba(255,255,255,.35); }
+  .catbtn{ display:flex; align-items:center; justify-content:space-between; gap:10px; margin:14px 0 0; border:1px solid var(--line); border-radius:12px; padding:14px 18px; text-decoration:none; color:var(--ink); }
+  .catbtn .t{ font-family:var(--display); font-weight:700; font-size:15px; }
+  .catbtn .s{ font-size:11.5px; color:var(--grey); }
+  .catbtn .arrow{ font-family:var(--display); font-weight:800; font-size:18px; }
+  .foot{ padding:22px 28px 26px; }
+  .foot .rule{ height:1px; background:var(--line); margin-bottom:12px; }
+  .foot .links{ display:flex; flex-wrap:wrap; gap:7px; margin-bottom:12px; }
+  .foot .links a{ font-size:11px; font-weight:600; color:var(--ink); text-decoration:none; background:var(--cream); border:1px solid #EAD98A; padding:7px 12px; border-radius:999px; }
+  .foot .legal{ font-size:10.5px; color:var(--grey); font-family:var(--mono); line-height:1.7; }
+  .wa-float{ position:fixed; right:16px; bottom:16px; z-index:50; display:flex; align-items:center; gap:8px; background:var(--yellow); color:var(--ink); font-family:var(--display); font-weight:700; font-size:14px; text-decoration:none; padding:13px 18px; border-radius:999px; box-shadow:0 10px 24px -8px rgba(0,0,0,.4); }
+  @media (max-width:400px){ .hero h1{font-size:29px} }
+</style>
 </head>
 <body>
-<a href="precios.html">BOLT ⚡ — Ver precios</a>
+  <div class="sheet">
+    <div class="topbar"></div>
+    <div class="head">
+      <img src="assets/bolt-logo-horizontal.svg" alt="BOLT ⚡">
+      <span class="lang">ES · EN</span>
+    </div>
+
+    <div class="hero">
+      <div class="kicker">Puntacana Resort &amp; Club · Cap Cana · Bávaro</div>
+      <h1>Your ride in <span class="hl">paradise.</span></h1>
+      <div class="sub">Renta y venta de carritos de golf. Lo entregamos donde estés y confirmamos por WhatsApp en minutos.
+        <span class="en">Golf cart rental &amp; sales. Delivered wherever you are, confirmed in minutes.</span>
+      </div>
+      <div class="cta-row">
+        <a class="btn-y" href="reserva">⚡ Reservar ahora</a>
+        <a class="btn-o" href="precios">Ver precios →</a>
+      </div>
+    </div>
+
+    <div class="cart-stage">
+      <svg viewBox="0 0 520 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Carrito de golf BOLT">
+        <line x1="30" y1="218" x2="490" y2="218" stroke="#E8E8EA" stroke-width="3" stroke-linecap="round"/>
+        <line x1="52" y1="96" x2="112" y2="96" stroke="#FFD60A" stroke-width="7" stroke-linecap="round"/>
+        <line x1="34" y1="122" x2="104" y2="122" stroke="#E8E8EA" stroke-width="7" stroke-linecap="round"/>
+        <line x1="58" y1="148" x2="118" y2="148" stroke="#FFD60A" stroke-width="7" stroke-linecap="round"/>
+        <rect x="150" y="52" width="240" height="14" rx="7" fill="#0A0A0A"/>
+        <rect x="166" y="66" width="9" height="76" fill="#0A0A0A"/>
+        <rect x="358" y="66" width="9" height="76" fill="#0A0A0A"/>
+        <path d="M138 176 L138 152 Q138 142 148 140 L216 128 Q288 116 326 132 L392 132 Q418 132 424 152 L428 176 Q428 188 416 188 L150 188 Q138 188 138 176 Z" fill="#FFD60A" stroke="#0A0A0A" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M300 140 L262 140 Q252 118 262 102 L286 102 Q282 120 300 140 Z" fill="#0A0A0A"/>
+        <rect x="304" y="96" width="14" height="44" rx="6" fill="#0A0A0A" transform="rotate(18 311 118)"/>
+        <path d="M236 128 Q234 100 252 98 L296 98 Q302 98 302 106 L300 116 Q276 112 258 128 Z" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="6" stroke-linejoin="round"/>
+        <path d="M337 120 L322 148 L333 148 L327 170 L349 141 L337 141 L343 120 Z" fill="#0A0A0A"/>
+        <circle cx="196" cy="196" r="26" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="7"/>
+        <circle cx="196" cy="196" r="8" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4"/>
+        <circle cx="382" cy="196" r="26" fill="#FFFFFF" stroke="#0A0A0A" stroke-width="7"/>
+        <circle cx="382" cy="196" r="8" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4"/>
+        <path d="M452 60 L428 96 L442 96 L434 124 L462 88 L447 88 L455 60 Z" fill="#FFD60A" stroke="#0A0A0A" stroke-width="4" stroke-linejoin="round"/>
+      </svg>
+    </div>
+
+    <div class="promises">
+      <div class="promise"><svg class="dot" viewBox="0 0 100 140"><path d="M58 0 L0 78 L36 78 L28 140 L100 50 L60 50 L70 0 Z" fill="#FFD60A" stroke="#0A0A0A" stroke-width="6"/></svg><div class="t">Confirmación en minutos<span class="en">Instant WhatsApp booking</span></div></div>
+      <div class="promise"><svg class="dot" viewBox="0 0 100 140"><path d="M58 0 L0 78 L36 78 L28 140 L100 50 L60 50 L70 0 Z" fill="#FFD60A" stroke="#0A0A0A" stroke-width="6"/></svg><div class="t">Entrega donde estés<span class="en">Delivered wherever you are</span></div></div>
+      <div class="promise"><svg class="dot" viewBox="0 0 100 140"><path d="M58 0 L0 78 L36 78 L28 140 L100 50 L60 50 L70 0 Z" fill="#FFD60A" stroke="#0A0A0A" stroke-width="6"/></svg><div class="t">Carritos asegurados<span class="en">Insured carts</span></div></div>
+      <div class="promise"><svg class="dot" viewBox="0 0 100 140"><path d="M58 0 L0 78 L36 78 L28 140 L100 50 L60 50 L70 0 Z" fill="#FFD60A" stroke="#0A0A0A" stroke-width="6"/></svg><div class="t">Soporte ES / EN<span class="en">Bilingual support</span></div></div>
+    </div>
+    <div class="hrule"></div>
+
+    <div class="sec">
+      <div class="eyebrow"><span class="num">01</span><span class="txt">Renta · Venta</span></div>
+      <div class="duo">
+        <div class="card">
+          <div class="k">Renta · Rental</div>
+          <h3>Para tus vacaciones</h3>
+          <p>Modelos de 4 y 6 plazas, entrega y recogida incluidas en rentas de 2+ días.</p>
+          <div class="price">US$50 <small>/ día · desde · from</small></div>
+          <a href="precios">Ver precios y modelos →</a>
+        </div>
+        <div class="card hot">
+          <div class="k">Venta · Sales ⚡ Nuevo</div>
+          <h3>Para tu villa o negocio</h3>
+          <p>Unidades nuevas con garantía por escrito y respaldo post-venta local. Vendemos lo que operamos.</p>
+          <div class="price">Pregunta <small>por disponibilidad</small></div>
+          <a href="https://wa.me/18098398515?text=Hola%20BOLT%20%E2%9A%A1%20Me%20interesa%20comprar%20un%20carrito%20nuevo">Escríbenos →</a>
+        </div>
+      </div>
+      <a class="catbtn" href="catalogo#modelos">
+        <span><span class="t">Catálogo de la flota</span><br><span class="s">Todos los modelos con fotos y specs · Full catalog</span></span>
+        <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="sec">
+      <div class="eyebrow"><span class="num">02</span><span class="txt">Cómo funciona · How it works</span></div>
+      <div class="steps">
+        <div class="step"><div class="n">1</div><div class="tx"><b>Cuéntanos fechas y lugar</b>Por WhatsApp o con el <a href="reserva" style="color:inherit">formulario de reserva</a>. <span class="en">Tell us dates &amp; location.</span></div></div>
+        <div class="step"><div class="n">2</div><div class="tx"><b>Confirmamos en minutos</b>Disponibilidad, precio claro con ITBIS y listo. <span class="en">Confirmed in minutes.</span></div></div>
+        <div class="step"><div class="n">3</div><div class="tx"><b>Te lo llevamos</b>A tu villa, proyecto o donde estés. Tú solo decides a dónde ir. <span class="en">We deliver to you.</span></div></div>
+      </div>
+    </div>
+
+    <div class="ally">
+      <div class="k">Concierges · Property managers</div>
+      <h3>Programa de Aliados</h3>
+      <p>Tarifa preferencial, cuenta mensual con factura e-CF y disponibilidad prioritaria — incluso en temporada alta.</p>
+      <div class="links">
+        <a class="f" href="reserva-concierge">⚡ Formulario de aliados</a>
+        <a class="g" href="aliados">Ver programa →</a>
+      </div>
+    </div>
+
+    <div class="foot">
+      <div class="rule"></div>
+      <div class="links">
+        <a href="precios">Precios</a>
+        <a href="reserva">Reservar</a>
+        <a href="catalogo">Catálogo</a>
+        <a href="empresa">Quiénes somos</a>
+        <a href="politica">Cancelación</a>
+        <a href="deposito">Depósito</a>
+        <a href="aliados">Aliados</a>
+      </div>
+      <div class="legal"><b>BOLT ⚡</b> · Your ride in paradise · KR Experts and Management SRL · RNC 132-22400-2<br>WhatsApp +1 809 839 8515 · info@krexpert.com · Av. Barceló Km 3 ½, Naves Montolio #17, Bávaro, R.D.</div>
+    </div>
+  </div>
+
+  <a class="wa-float" href="https://wa.me/18098398515?text=%C2%A1Hola%20BOLT%21%20%E2%9A%A1" target="_blank" rel="noopener">⚡ WhatsApp</a>
 </body>
 </html>
