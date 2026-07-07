@@ -1,173 +1,28 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>BOLT ⚡ Your ride in paradise · Renta de Carritos</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BOLT ⚡ — Nos mudamos a boltgolfcars.com</title>
+<link rel="canonical" href="https://boltgolfcars.com/precios/">
+<meta http-equiv="refresh" content="0; url=https://boltgolfcars.com/precios/">
+<meta name="theme-color" content="#0a0a0a">
+<script>location.replace("https://boltgolfcars.com/precios/");</script>
 <style>
-  :root{ --ink:#1A1A1A; --grey:#8C8C8C; --line:#ECECEC; --yellow:#FFD60A; --cream:#FFFBEA; --white:#FFFFFF;
-    --display:"Bricolage Grotesque", system-ui, sans-serif; --body:"Inter", system-ui, sans-serif; }
-  *{box-sizing:border-box;margin:0;padding:0}
-  body{ font-family:var(--body); color:var(--ink); background:#EDEDED; -webkit-font-smoothing:antialiased; padding:18px 14px 40px; line-height:1.5; }
-  .sheet{ max-width:480px; margin:0 auto; background:var(--white); border:1px solid #E2E2E2; border-radius:14px; overflow:hidden; box-shadow:0 24px 50px -24px rgba(0,0,0,.35); }
-  .head{ padding:24px 26px 0; }
-  .brand{ display:flex; align-items:center; gap:8px; font-family:var(--display); font-weight:800; font-size:28px; letter-spacing:-1px; }
-  .brand svg{width:22px;height:22px;flex:none}
-  .hero{ padding:18px 26px 0; }
-  .hero .kicker{ font-size:10.5px; font-weight:600; letter-spacing:2.4px; text-transform:uppercase; color:var(--grey); }
-  .hero h1{ font-family:var(--display); font-weight:800; font-size:26px; line-height:1.14; letter-spacing:-.7px; margin-top:8px; max-width:15ch; }
-  .hero .sub{ font-size:13.5px; color:#444; margin-top:9px; max-width:38ch; }
-  .hook{ display:flex; align-items:baseline; gap:9px; margin-top:15px; }
-  .hook .lbl{ font-size:11px; color:var(--grey); text-transform:uppercase; letter-spacing:1.5px; font-weight:600; }
-  .hook .amt{ font-family:var(--display); font-weight:800; font-size:40px; letter-spacing:-2px; line-height:.9; box-shadow:inset 0 -10px 0 var(--yellow); }
-  .hook .per{ font-size:13px; color:var(--grey); }
-  .promises{ display:flex; flex-wrap:wrap; gap:11px 10px; padding:18px 26px 6px; }
-  .promise{ display:flex; align-items:flex-start; gap:9px; width:calc(50% - 5px); }
-  .promise svg{ width:17px; height:17px; flex:none; margin-top:1px; }
-  .promise .t{ font-size:12.5px; font-weight:600; line-height:1.2; }
-  .promise .en{ display:block; font-weight:400; font-style:italic; color:var(--grey); font-size:10.5px; margin-top:1px; }
-  .hrule{ height:3px; background:var(--yellow); margin:14px 26px 0; }
-  .sec{ padding:20px 26px 2px; }
-  .eyebrow{ display:flex; align-items:baseline; gap:9px; margin-bottom:6px; }
-  .eyebrow .num{ font-family:var(--display); font-weight:800; font-size:13px; }
-  .eyebrow .txt{ font-size:10.5px; font-weight:600; letter-spacing:2.2px; text-transform:uppercase; color:var(--grey); }
-  .row{ display:flex; align-items:center; gap:12px; padding:13px 0; border-bottom:1px solid var(--line); }
-  .row:last-child{border-bottom:0}
-  .row .info{ flex:1; min-width:0; }
-  .row .name{ font-family:var(--display); font-weight:700; font-size:16px; letter-spacing:-.2px; line-height:1.2; }
-  .row .cap{ font-size:12px; color:var(--grey); margin-top:2px; }
-  .row .feat{ font-size:11px; color:var(--ink); font-weight:600; margin-top:5px; line-height:1.3; }
-  .row .feat .fen{ display:block; color:var(--grey); font-weight:400; font-style:italic; font-size:10px; margin-top:1px; }
-  .pill{ display:inline-block; margin-top:7px; font-size:10px; font-weight:700; letter-spacing:.4px; text-transform:uppercase; color:var(--ink); background:var(--yellow); padding:3px 8px; border-radius:5px; }
-  .price{ text-align:right; flex:none; }
-  .price .amt{ font-family:var(--display); font-weight:800; font-size:25px; letter-spacing:-1px; line-height:1; }
-  .price .per{ display:block; font-size:10.5px; font-weight:500; color:var(--grey); margin-top:3px; }
-  .price .itbis{ display:block; font-size:10px; font-weight:500; color:var(--grey); margin-top:4px; white-space:nowrap; }
-  .box{ margin:16px 26px 0; background:var(--cream); border-left:4px solid var(--yellow); border-radius:8px; padding:15px 18px; }
-  .box.dark{ border-left-color:#1A1A1A; }
-  .box h3{ font-family:var(--display); font-weight:700; font-size:14px; letter-spacing:.4px; text-transform:uppercase; }
-  .box h3 span{ color:var(--grey); font-weight:600; font-size:11px; letter-spacing:1px; }
-  .box .ln{ font-size:13px; margin-top:8px; line-height:1.45; }
-  .box .ln b{ font-weight:600; }
-  /* ALIADOS dark block */
-  .ally{ margin:20px 26px 0; background:#1A1A1A; color:#fff; border-radius:12px; padding:22px 22px 20px; }
-  .ally .k{ font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--yellow); }
-  .ally h3{ font-family:var(--display); font-weight:800; font-size:20px; letter-spacing:-.4px; margin-top:6px; }
-  .ally p{ font-size:12.5px; color:rgba(255,255,255,.82); margin-top:8px; line-height:1.5; }
-  .ally ul{ list-style:none; margin:11px 0 0; }
-  .ally li{ font-size:12.5px; padding:4px 0 4px 18px; position:relative; }
-  .ally li::before{ content:"⚡"; position:absolute; left:0; color:var(--yellow); font-size:11px; }
-  .ally .en{ color:rgba(255,255,255,.55); font-style:italic; font-size:11px; margin-top:9px; }
-  .ally a{ display:inline-flex; align-items:center; gap:8px; margin-top:15px; background:var(--yellow); color:#1A1A1A; font-family:var(--display); font-weight:700; font-size:14px; text-decoration:none; padding:11px 20px; border-radius:999px; }
-  .ally a svg{width:16px;height:16px}
-  .cat{ display:flex; align-items:center; gap:16px; margin:16px 26px 0; border:1px solid #E2E2E2; border-radius:10px; padding:14px 16px; }
-  .cat img{ width:90px; height:90px; flex:none; border-radius:6px; }
-  .cat .catqr{ flex:none; line-height:0; display:block; }
-  .cat .ct .k{ font-size:10px; font-weight:600; letter-spacing:2px; text-transform:uppercase; color:var(--grey); }
-  .cat .ct h4{ font-family:var(--display); font-weight:800; font-size:17px; letter-spacing:-.3px; margin-top:3px; line-height:1.1; }
-  .cat .ct p{ font-size:12px; color:var(--grey); margin-top:5px; line-height:1.4; }
-  .cat .ct .catlink{ display:inline-flex; align-items:center; gap:6px; margin-top:10px; background:#1A1A1A; color:#fff; font-family:var(--display); font-weight:700; font-size:12.5px; text-decoration:none; padding:8px 14px; border-radius:999px; }
-  .cta{ text-align:center; padding:24px 24px 6px; }
-  .wa{ display:inline-flex; align-items:center; gap:9px; background:var(--yellow); color:var(--ink); font-family:var(--display); font-weight:700; font-size:16px; text-decoration:none; padding:13px 28px; border-radius:999px; }
-  .wa svg{width:18px;height:18px}
-  .foot{ padding:18px 26px 24px; }
-  .foot .rule{ height:1px; background:var(--line); margin-bottom:12px; }
-  .foot .legal{ font-size:10.5px; color:var(--grey); line-height:1.6; }
-  .foot .legal b{ color:var(--ink); font-weight:600; }
-  .foot .docs{ display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
-  .foot .docs a{ display:inline-flex; align-items:center; gap:6px; font-size:11.5px; font-weight:600; color:var(--ink); text-decoration:none; background:var(--cream); border:1px solid #EAD98A; padding:8px 13px; border-radius:999px; }
-  .foot .docs a svg{ width:13px; height:13px; flex:none; }
-  @media print{ body{background:#fff;padding:0} .sheet{box-shadow:none;border:0;border-radius:0;max-width:100%} }
+  html,body{margin:0;height:100%}
+  body{background:#0a0a0a;color:#fff;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;display:flex;align-items:center;justify-content:center;text-align:center;padding:24px}
+  .c{max-width:30rem}
+  .b{font-weight:800;font-size:1.6rem;letter-spacing:.02em}
+  .b span{color:#ffd60a}
+  p{color:rgba(255,255,255,.75);margin:.8rem 0 1.4rem;line-height:1.5}
+  a{display:inline-block;background:#ffd60a;color:#0a0a0a;font-weight:700;text-decoration:none;border-radius:999px;padding:.8rem 1.6rem}
 </style>
 </head>
 <body>
-  <div class="sheet">
-    <div class="head">
-      <div class="brand"><svg viewBox="0 0 100 140"><path d="M58 0 L0 78 L36 78 L28 140 L100 50 L60 50 L70 0 Z" fill="#FFD60A"/></svg><span>BOLT</span></div>
-    </div>
-
-    <div class="hero">
-      <div class="kicker">Puntacana Resort &amp; Club · Cap Cana · Bávaro</div>
-      <h1>Your ride in paradise.<span style="display:block;font-size:15px;font-weight:600;color:#8C8C8C;margin-top:5px;letter-spacing:0">Tu carrito, donde tú estés.</span></h1>
-      <div class="sub">Confirmamos por WhatsApp en minutos y lo entregamos donde estés. Tú solo decides a dónde ir.<br><span style="color:#8C8C8C">We confirm on WhatsApp in minutes and bring it to you, wherever you are — you just decide where to go.</span></div>
-      <div class="hook"><span class="lbl">Desde · from</span><span class="amt">US$50</span><span class="per">/ día · day</span></div>
-    </div>
-
-    <div class="promises">
-      <div class="promise"><svg viewBox="0 0 24 24" fill="#FFD60A"><path d="M13.5 2 4 13.2h6.2L9 22l9.8-11.6h-6.4L13.5 2Z"/></svg><div class="t">Confirmación en minutos<span class="en">Instant WhatsApp booking</span></div></div>
-      <div class="promise"><svg viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg><div class="t">Entrega donde estés<span class="en">Delivered wherever you are</span></div></div>
-      <div class="promise"><svg viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v6c0 4 3 7 7 9 4-2 7-5 7-9V6l-7-3Z"/><path d="m9 12 2 2 4-4"/></svg><div class="t">Carritos asegurados<span class="en">Insured carts</span></div></div>
-      <div class="promise"><svg viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.5 2.5 15 0 18M12 3c-2.5 2.5-2.5 15 0 18"/></svg><div class="t">Soporte ES / EN<span class="en">Bilingual support</span></div></div>
-    </div>
-    <div class="hrule"></div>
-
-    <div class="sec">
-      <div class="eyebrow"><span class="num">01</span><span class="txt">Hasta 4 personas · Up to 4</span></div>
-      <div class="row"><div class="info"><div class="name">4 plazas · Budget</div><div class="cap">2+2 · hasta 4 personas · up to 4</div><span class="pill">El más económico · Best value</span></div><div class="price"><span class="amt">US$50</span><span class="per">por día · per day</span><span class="itbis">con ITBIS · US$59.00</span></div></div>
-      <div class="row"><div class="info"><div class="name">4 plazas · Estándar</div><div class="cap">2+2 · hasta 4 personas · up to 4</div></div><div class="price"><span class="amt">US$65</span><span class="per">por día · per day</span><span class="itbis">con ITBIS · US$76.70</span></div></div>
-    </div>
-
-    <div class="sec">
-      <div class="eyebrow"><span class="num">02</span><span class="txt">Hasta 6 personas · Up to 6</span></div>
-      <div class="row"><div class="info"><div class="name">6 plazas · Budget</div><div class="cap">4+2 · hasta 6 personas · up to 6</div></div><div class="price"><span class="amt">US$65</span><span class="per">por día · per day</span><span class="itbis">con ITBIS · US$76.70</span></div></div>
-      <div class="row"><div class="info"><div class="name">6 plazas · Estándar</div><div class="cap">4+2 · hasta 6 personas · up to 6</div></div><div class="price"><span class="amt">US$70</span><span class="per">por día · per day</span><span class="itbis">con ITBIS · US$82.60</span></div></div>
-      <div class="row"><div class="info"><div class="name">6 plazas · Premium — ECO Cross</div><div class="cap">4+2 · hasta 6 personas · up to 6</div><div class="feat">🔋 Litio · hasta 95 km · asientos de lujo<span class="fen">Lithium · up to 95 km · luxury seats</span></div></div><div class="price"><span class="amt">US$85</span><span class="per">por día · per day</span><span class="itbis">con ITBIS · US$100.30</span></div></div>
-    </div>
-
-    <div class="box">
-      <h3>Entrega y recogida <span>· Delivery</span></h3>
-      <div class="ln"><b>2 días o más:</b> incluida sin costo. <b>1 día:</b> US$40 + ITBIS (US$47.20) por transporte.</div><div class="ln" style="color:#8C8C8C;font-style:italic;font-size:12px">2+ days: delivery included free. 1 day: US$40 + tax (US$47.20) transport fee.</div>
-      <div class="ln"><b>7 noches o más:</b> pregunta por tarifa semanal y mensual con descuento.</div><div class="ln" style="color:#8C8C8C;font-style:italic;font-size:12px">7+ nights: ask about discounted weekly & monthly rates.</div>
-    </div>
-
-    <div class="ally">
-      <div class="k">Agencias &amp; Property Managers · Agencies &amp; villa managers</div>
-      <h3>Programa de Aliados · Partner Program</h3>
-      <p>¿Manejas villas o eres agencia de renta vacacional? Conviértete en aliado BOLT y simplifica los carritos de todas tus propiedades.</p>
-      <ul>
-        <li>Tarifa preferencial de aliado</li>
-        <li>Cuenta mensual con factura e-CF, sin depósito por reserva</li>
-        <li>Disponibilidad prioritaria y reporte por villa</li>
-      </ul>
-      <div class="en">Preferred rates · monthly e-invoice account · priority availability · per-villa reporting.</div>
-      <a href="https://wa.me/18098398515?text=Hola%20BOLT%2C%20manejo%20villas%2Fagencia%20y%20quiero%20la%20tarifa%20de%20aliado." target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-.9.1-3-.9-2.5-1.1-4-3.6-4.1-3.8-.1-.2-1-1.3-1-2.5s.6-1.8.8-2c.2-.2.5-.3.6-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.5-.3.3c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg>
-        Pregunta por la tarifa · Ask for partner rate
-      </a>
-    </div>
-
-    <div class="cat">
-      <a class="catqr" href="catalogo#modelos" target="_blank" rel="noopener"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAXIAAAFyAQAAAADAX2ykAAADFUlEQVR4nO1cW4rjQAys7hjyacMcIEdxbrBHWvZIe4P4KHMD+zNgo0WP7jwWPDG7E7qx6iNjW0UQKCV1S+0JhC0Y4iY64Px1xC/sz3D+OuL++FMwnAHIBYCF/zYIobNncluk/5sQd8g/kECiSkQzB7SBXKH/bIBe7OO7/NmCuImNnfKDinNqICLWIJ+nEDB0bGeJnwv2/3XEnfGbp3saupECaxqYDnPof3+81Z/o/G+M72EOQAANP0aE/nINNJzmf/r+6PwC4ku3B/1laTTImD4o9FJ1WyZM7/AnOv+/8xddHtuT6UjoxwNZwZ0aYBB7V6r/WxB3xgfdYeSqy8vpSyv384OVcSnN/+j8dZBFFQ/boJuhpXurx7dC/qKpmS6Si0+m5BC6JdBFTC0vsthapP9bEHfGh7UxuL9h+rX8jF4N/MFKdv3WyIfVVa26VnBvmZqsMDOTa7LHtzI+UsF9WFqJfiEi5iBzkrafQGn+R+evg2SZrBGUMnszjPLMMrXHt0o+LA2nRbTKWQPaSrq2ImzCLs3/6Px1kMo06dd2vbLIQgYL29dXNeuXUmq2BXNOzWMqvRrz0vyPzn81Pws0oLnJAd36in49vjXzlzThbXm+3+VKPKaetE6SivX/RcSd8ZHakGktpXhYSSe4fuvkL9qGDGfuQEoniwX7UH/to0z/tyDujI+7qZG1JnPBJdv1WvfS62+FfNyNiVS6ss3N4RbIxsn3vzXycd/ayLMEnQq2ouQ8aXD9VsiHyfSWpLNgBdbkyIbS/I/OX0W87XCJxkUPxIafn0eyM7OaqdPqq0T/NyHujI+7XkYeAus4qdftEl+lnO36rY2Ph9aV7YSt19ymqVEeIXp86zwfG/jos1yxdglDx+efP498Praz0zvv8Sc6/xvim5BOYmFqZhq6A7/OILcfs/0ESvM/On8dlJfOabQg6dqGhNCDHT4frJtP2nrWrjNPGqajnZ8kugYifonwnf68jriBi72/vzAd01sL7TVIw8peAj7NoF/+/kKF/OD/n2EVcd38F5y/jviF/RnOxyr+ABcveVg3n9VgAAAAAElFTkSuQmCC" alt="QR catálogo BOLT"></a>
-      <div class="ct"><div class="k">Ver la flota · See the fleet</div><h4>Catálogo completo · Full catalog</h4><p>Escanea (o toca el botón) para ver cada carrito, specs y manual de uso.<br>Scan or tap to see the full fleet.</p><a class="catlink" href="catalogo#modelos" target="_blank" rel="noopener">Ver catálogo y modelos · See catalog →</a></div>
-    </div>
-
-    <div class="cta">
-      <a class="wa" href="https://wa.me/18098398515?text=%C2%A1Hola%20BOLT%21%20%E2%9A%A1%20Quiero%20reservar%20un%20carrito%20%F0%9F%9B%BA%0AModelo%3A%20%0AFechas%20%28entrada%20y%20salida%29%3A%20%0APersonas%3A%20%0ALugar%20de%20entrega%3A%20" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1 0 12 2Zm5.5 14.2c-.2.6-1.2 1.2-1.7 1.2-.4 0-.9.1-3-.9-2.5-1.1-4-3.6-4.1-3.8-.1-.2-1-1.3-1-2.5s.6-1.8.8-2c.2-.2.5-.3.6-.3h.5c.2 0 .4 0 .6.5l.8 2c.1.2.1.3 0 .5l-.4.5-.3.3c-.1.1-.3.3-.1.6.2.3.8 1.3 1.7 2.1 1.2 1 2.1 1.3 2.4 1.5.3.1.5.1.6-.1l.7-.9c.2-.2.4-.2.6-.1l1.9.9c.2.1.4.2.4.3.1.1.1.6-.1 1.2Z"/></svg>
-        Reservar por WhatsApp · Book on WhatsApp
-      </a>
-      <div style="margin-top:12px">
-        <a href="reserva" style="display:inline-flex;align-items:center;gap:8px;background:#FFFFFF;color:#1A1A1A;border:1.5px solid #1A1A1A;font-weight:700;font-size:14px;text-decoration:none;padding:11px 24px;border-radius:999px">⚡ Formulario de reserva · Booking form →</a>
-      </div>
-    </div>
-
-    <div class="foot">
-      <div class="rule"></div>
-      <div class="docs">
-        <a href="politica.html">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-          Política de Cancelación · Cancellation
-        </a>
-        <a href="deposito.html">
-          <svg viewBox="0 0 24 24" fill="none" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-          Política de Depósito · Deposit
-        </a>
-      </div>
-      <div class="legal">Precios en <b>USD por día</b>. No incluyen ITBIS; se agrega <b>18%</b> (mostrado en cada modelo). Disponibilidad sujeta a flota.<br><span style="font-style:italic">Prices in USD per day. Tax (ITBIS 18%) not included; shown per model. Subject to fleet availability.</span><br><b>BOLT ⚡</b> · KR Experts and Management SRL · RNC 132-22400-2 · +1 809 839 8515 · info@krexpert.com</div>
-    </div>
-  </div>
+<div class="c">
+<div class="b">⚡ BOLT</div>
+<p>Nos mudamos a <b>boltgolfcars.com</b>. Te estamos redirigiendo…</p>
+<a href="https://boltgolfcars.com/precios/">Ir al sitio &rarr;</a>
+</div>
 </body>
 </html>
